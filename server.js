@@ -63,5 +63,9 @@ app.get('/maint',(req, res)=>{
 
    res.render('maint.hbs',pageMeta);
 });
+
+const port = process.env.port || 3000;
    
-app.listen(3000);
+app.listen(port,()=>{
+    console.log(`Server is up and running on port ${port}!`);
+});
