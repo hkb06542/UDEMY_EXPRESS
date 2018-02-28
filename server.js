@@ -25,13 +25,13 @@ var now =new Date().toString();
 var log = `${now} : ${req.method}; path:${req.url}`;
 fs.appendFileSync('server.log',log+'\n');
 
-var  pageMeta = {
-    pageTitle : 'Maintainace Page',
-    message : 'This Page is under maintaince'
-  };
+// var  pageMeta = {
+//     pageTitle : 'Maintainace Page',
+//     message : 'This Page is under maintaince'
+//   };
 
-res.render('maint.hbs',pageMeta);
-//next();
+// res.render('maint.hbs',pageMeta);
+next();
 });
 
 
